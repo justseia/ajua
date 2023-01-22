@@ -29,3 +29,7 @@ Route::post('/holiday', \App\Http\Controllers\API\v1\Holiday\StoreController::cl
 Route::get('/koran', \App\Http\Controllers\API\v1\Koran\IndexController::class);
 Route::get('/koran/{koran}', \App\Http\Controllers\API\v1\Koran\ShowController::class);
 Route::post('/koran', \App\Http\Controllers\API\v1\Koran\StoreController::class);
+
+Route::get('/zikr', \App\Http\Controllers\API\v1\Zikr\IndexController::class);
+Route::get('/zikr/{zikr}', \App\Http\Controllers\API\v1\Zikr\ShowController::class);
+Route::post('/zikr', \App\Http\Controllers\API\v1\Zikr\StoreController::class);

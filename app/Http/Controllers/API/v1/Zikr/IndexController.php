@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Controllers\API\v1\Koran;
+namespace App\Http\Controllers\API\v1\Zikr;
 
 use App\Http\Controllers\Controller;
-use App\Models\Koran;
+use App\Models\Zikr;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
     public function __invoke()
     {
-        $korans = Koran::latest('id')
+        $korans = Zikr::latest('id')
             ->select(
                 'id',
                 'name',

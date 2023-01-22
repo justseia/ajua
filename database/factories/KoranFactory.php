@@ -17,12 +17,13 @@ class KoranFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->name(),
-            'body' => fake()->text(),
-            'translation' => fake()->text(),
-            'translit' => fake()->text(),
+            'name' => 'Аль-Фатиха',
+            'designation' => '(Открывающая Коран)',
+            'body' => 'ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ',
+            'translation' => 'Во имя Аллаха, Милостивого, Милосердного!',
+            'translit' => 'Bismi Al-Lahi Ar-Raĥmāni Ar-Raĥīmi',
             'audio' => 'https://clck.ru/33GttN',
-            'description' => fake()->text(),
+            'interpretation' => 'Аль-Фатиха',
         ];
     }
 }

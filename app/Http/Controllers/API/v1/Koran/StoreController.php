@@ -12,11 +12,12 @@ class StoreController extends Controller
     {
         $koran = Koran::create([
             'name' => $request->name,
+            'designation' => $request->designation,
             'body' => $request->body,
             'translation' => $request->translation,
             'translit' => $request->translit,
             'audio' => $request->audio,
-            'description' => $request->description,
+            'interpretation' => $request->interpretation,
         ]);
         return response()->json($koran);
     }

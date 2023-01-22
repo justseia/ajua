@@ -17,8 +17,7 @@ class HolidayFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->realText(),
-            'photo' => fake()->imageUrl(600, 400),
+            'name' => 'Ид аль-Фитр (Рамадан-байрам)',
             'date' => fake()->date(),
         ];
     }
