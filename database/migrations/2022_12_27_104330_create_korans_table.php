@@ -12,12 +12,14 @@ return new class extends Migration {
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('korans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('surname');
-            $table->string('number')->unique();
-            $table->timestamp('birthday');
+            $table->text('body');
+            $table->text('translation');
+            $table->text('translit');
+            $table->string('audio');
+            $table->text('description');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -30,6 +32,6 @@ return new class extends Migration {
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('korans');
     }
 };
