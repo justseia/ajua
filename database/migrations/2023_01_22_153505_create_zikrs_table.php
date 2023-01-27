@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('designation');
             $table->text('body');
             $table->string('transcription');
+            $table->string('audio');
             $table->timestamps();
             $table->softDeletes();
         });

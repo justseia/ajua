@@ -15,6 +15,7 @@ class StoreController extends Controller
             'designation' => $request->designation,
             'body' => $request->body,
             'transcription' => $request->transcription,
+            'audio' => $request->audio,
         ]);
         return response()->json($zikr);
     }
