@@ -33,3 +33,7 @@ Route::post('/koran', \App\Http\Controllers\API\v1\Koran\StoreController::class)
 Route::get('/zikr', \App\Http\Controllers\API\v1\Zikr\IndexController::class);
 Route::get('/zikr/{zikr}', \App\Http\Controllers\API\v1\Zikr\ShowController::class);
 Route::post('/zikr', \App\Http\Controllers\API\v1\Zikr\StoreController::class);
+
+Route::get('/news', \App\Http\Controllers\API\v1\News\IndexController::class);
+Route::get('/news/{news}', \App\Http\Controllers\API\v1\News\ShowController::class);
+Route::post('/news', \App\Http\Controllers\API\v1\News\StoreController::class);
