@@ -10,9 +10,26 @@ class IndexController extends Controller
     public function __invoke()
     {
         $holidays = Holiday::all();
-        $holidays = $holidays->groupBy(function ($holiday) {
+        $holidays = $holidays->sortBy(function ($holiday) {
             $date = new \DateTime($holiday->date);
-            return $date->format('F');
+            return $date->format('n');
+        })->groupBy(function ($holiday) {
+            $date = new \DateTime($holiday->date);
+            $months = [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ];
+            return $months[$date->format('n') - 1];
         });
         return response()->json($holidays);
     }
