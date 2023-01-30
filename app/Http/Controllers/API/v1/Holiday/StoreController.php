@@ -6,8 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Holiday;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Validator;
-use Intervention\Image\Facades\Image;
 
 class StoreController extends Controller
 {

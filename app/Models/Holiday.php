@@ -11,7 +11,11 @@ class Holiday extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'holidays';
-    protected $guarded = [];
+    protected $guarded = [
+        'created_at',
+        'updated_at',
+        'deleted_at',
+    ];
 
     protected $hidden = [
         'created_at',

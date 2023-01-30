@@ -18,10 +18,11 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'name' => fake()->firstName(),
-            'surname' => fake()->lastName(),
-            'number' => fake()->e164PhoneNumber(),
-            'birthday' => fake()->date(),
+            'name' => 'Kalmurat',
+            'surname' => 'Seiitmurat',
+            'gender' => 'male',
+            'email' => fake()->email(),
+            'birthday' => fake()->dateTimeBetween('2023-01-01', '2023-12-31')->format('Y-m-d'),
         ];
     }
 }

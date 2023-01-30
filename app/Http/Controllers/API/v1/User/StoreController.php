@@ -11,12 +11,13 @@ class StoreController extends Controller
 {
     public function __invoke(Request $request)
     {
-        $birthday = Carbon::parse($request->date);
+        $birthday = Carbon::parse($request->birthday);
 
         $user = User::create([
             'name' => $request->name,
             'surname' => $request->surname,
-            'number' => $request->number,
+            'gender' => $request->gender,
+            'email' => $request->email,
             'birthday' => $birthday,
         ]);
         return response()->json($user);

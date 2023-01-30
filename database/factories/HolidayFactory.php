@@ -18,7 +18,7 @@ class HolidayFactory extends Factory
     {
         return [
             'name' => 'Ид аль-Фитр (Рамадан-байрам)',
-            'date' => fake()->date(),
+            'date' => fake()->dateTimeBetween('2023-01-01', '2023-12-31')->format('Y-m-d'),
         ];
     }
 }
