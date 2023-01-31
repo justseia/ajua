@@ -18,11 +18,14 @@ return new class extends Migration {
             $table->string('surname')->nullable();
             $table->string('gender')->nullable();
             $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('birthday')->nullable();
+            $table->string('verification_code')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
     }
+
 
     /**
      * Reverse the migrations.

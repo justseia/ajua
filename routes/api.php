@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/user', \App\Http\Controllers\API\v1\User\IndexController::class);
 Route::get('/user/{user}', \App\Http\Controllers\API\v1\User\ShowController::class);
 Route::post('/user', \App\Http\Controllers\API\v1\User\StoreController::class);
+Route::post('/user/verify', \App\Http\Controllers\API\v1\User\VerifyEmailController::class);
 
 Route::get('/holiday', \App\Http\Controllers\API\v1\Holiday\IndexController::class);
 Route::get('/holiday/{holiday}', \App\Http\Controllers\API\v1\Holiday\ShowController::class);
@@ -37,3 +38,7 @@ Route::post('/zikr', \App\Http\Controllers\API\v1\Zikr\StoreController::class);
 Route::get('/news', \App\Http\Controllers\API\v1\News\IndexController::class);
 Route::get('/news/{news}', \App\Http\Controllers\API\v1\News\ShowController::class);
 Route::post('/news', \App\Http\Controllers\API\v1\News\StoreController::class);
+
+Route::get('/namaz', \App\Http\Controllers\API\v1\Namaz\IndexController::class);
+Route::get('/namaz/{namaz}', \App\Http\Controllers\API\v1\Namaz\ShowController::class);
+Route::post('/namaz', \App\Http\Controllers\API\v1\Namaz\StoreController::class);

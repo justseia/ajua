@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "56343d13-65af-49ad-9335-eb4e3e669948",
+		"name": "Ajua",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/user?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Seiitmurat",
+									"type": "default"
+								},
+								{
+									"key": "surname",
+									"value": "Kalmurat",
+									"type": "default"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "seiitmurat.iitu@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "birthday",
+									"value": "2023-01-14 00:00:00",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify Email User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "seiitmurat.iitu@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "code",
+									"value": "2537",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/verify",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Holiday",
+			"item": [
+				{
+					"name": "Get Holiday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/holiday/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"holiday",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Holiday",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/holiday",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"holiday"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Holiday",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ajua",
+									"type": "default"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/Users/seiitmratkalmrat/Downloads/Icon mobile app.png"
+								},
+								{
+									"key": "date",
+									"value": "2023-01-14 23:42:33",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/holiday",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"holiday"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Koran",
+			"item": [
+				{
+					"name": "Get Koran",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/koran/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"koran",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Koran",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/koran?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"koran"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Koran",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Аль-Фатиха",
+									"type": "default"
+								},
+								{
+									"key": "designation",
+									"value": "(Открывающая Коран)",
+									"type": "default"
+								},
+								{
+									"key": "body",
+									"value": "ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ",
+									"type": "default"
+								},
+								{
+									"key": "translation",
+									"value": "Во имя Аллаха, Милостивого, Милосердного!",
+									"type": "default"
+								},
+								{
+									"key": "translit",
+									"value": "Bismi Al-Lahi Ar-Raĥmāni Ar-Raĥīmi",
+									"type": "default"
+								},
+								{
+									"key": "audio",
+									"value": "https://clck.ru/33GttN",
+									"type": "default"
+								},
+								{
+									"key": "interpretation",
+									"value": "Во имя Аллаха, Милостивого, Милосердного! [[Это означает: я начинаю во имя Аллаха. Из лексического анализа этого словосочетания ясно, что подразумеваются все прекрасные имена Всевышнего Господа. Аллах - одно из этих имен, означающее «Бог, Которого обожествляют и Которому поклоняются, Единственный, Кто заслуживает поклонения в силу Своих божественных качеств - качеств совершенства и безупречности». Прекрасные имена Милостивый и Милосердный свидетельствуют о Его великом милосердии, объемлющем всякую вещь и всякую тварь. Милосердия Аллаха в полной мере будут удостоены Его богобоязненные рабы, которые следуют путем Божьих пророков и посланников. А все остальные творения получат лишь часть Божьей милости. Следует знать, что все праведные богословы единодушно говорили о необходимости веры в Аллаха и Его божественные качества. Господь - Милостивый и Милосердный, то есть обладает милосердием, которое проявляется на Его рабах. Все блага и щедроты являются одним из многочисленных проявлений Его милости и сострадания. То же самое можно сказать и об остальных именах Аллаха. Он всеведущ, то есть обладает знанием обо всем сущем. Он всемогущ, то есть обладает могуществом и властен над всякой тварью.]]",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/koran",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"koran"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zikr",
+			"item": [
+				{
+					"name": "Get Zikr",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/zikr/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"zikr",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Zikr",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/zikr?page=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"zikr"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Zikr",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Саджа",
+									"type": "default"
+								},
+								{
+									"key": "designation",
+									"value": "Субхана зиль-мульки валь-малакут. Субхана зиль-иззати валь-азамати в",
+									"type": "default"
+								},
+								{
+									"key": "body",
+									"value": "ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ",
+									"type": "default"
+								},
+								{
+									"key": "transcription",
+									"value": "Зааликаль Китаабу ла райба фих. Худал-лил-Муттакин",
+									"type": "default"
+								},
+								{
+									"key": "audio",
+									"value": "https://clck.ru/33GttN",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/zikr",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"zikr"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "Get News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/news",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create News",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
+									"type": "default"
+								},
+								{
+									"key": "url",
+									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/news",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"news"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Namaz",
+			"item": [
+				{
+					"name": "Get Namaz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/namaz/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"namaz",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Namaz",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/namaz",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"namaz"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Namaz",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
+									"type": "default"
+								},
+								{
+									"key": "url",
+									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/namaz",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"namaz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
