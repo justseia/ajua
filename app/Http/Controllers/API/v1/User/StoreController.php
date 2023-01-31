@@ -18,6 +18,15 @@ class StoreController extends Controller
             $birthday = null;
         }
 
+        $user = User::where('email', $request->email)->first();
+
+        if ($user) {
+            $user->verification_code = fake()->numberBetween(1000, 9999);
+            $user->save();
+            Mail::to($user->email)->send(new VerifyEmail($user->verification_code));
+            return response()->json(['status' => 'resend']);
+        }
+
         $user = User::create([
             'name' => $request->name,
             'surname' => $request->surname,
@@ -29,6 +38,6 @@ class StoreController extends Controller
 
         Mail::to($user->email)->send(new VerifyEmail($user->verification_code));
 
-        return response()->json($user);
+        return response()->json(['status' => 'success']);
     }
 }
