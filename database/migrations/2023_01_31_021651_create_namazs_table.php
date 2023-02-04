@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('namazs', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('photo');
+            $table->string('audio');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,6 +19,11 @@ class StoreController extends Controller
             'audio' => $request->audio,
             'interpretation' => $request->interpretation,
         ]);
-        return response()->json($koran);
+
+        if (!$koran) {
+            return response()->json(['message' => 'error'], 400);
+        }
+
+        return response()->json($koran, 200);
     }
 }

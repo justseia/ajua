@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke(Request $request, Namaz $namaz)
     {
+
         $namaz = Namaz::where('id', 1)->get();
-//        $namazz =
+//        $namazz =2
         return response()->json($namaz);
     }
 }

@@ -17,6 +17,11 @@ class StoreController extends Controller
             'name' => $request->name,
             'date' => $date,
         ]);
-        return response()->json($holiday);
+
+        if (!$holiday) {
+            return response()->json(['message' => 'error'], 400);
+        }
+
+        return response()->json($holiday, 200);
     }
 }

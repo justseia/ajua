@@ -9,6 +9,9 @@ class ShowController extends Controller
 {
     public function __invoke(Holiday $holiday)
     {
+        if (!$holiday) {
+            return response()->json(['message' => 'error'], 404);
+        }
         return response()->json($holiday);
     }
 }

@@ -10,7 +10,7 @@ class Namaz extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $table = 'korans';
+    protected $table = 'namazs';
     protected $guarded = [
         'created_at',
         'updated_at',

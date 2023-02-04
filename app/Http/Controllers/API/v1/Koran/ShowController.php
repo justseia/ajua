@@ -9,6 +9,9 @@ class ShowController extends Controller
 {
     public function __invoke(Koran $koran)
     {
-        return response()->json($koran);
+        if (!$koran) {
+            return response()->json(['message' => 'error'], 404);
+        }
+        return response()->json($koran, 200);
     }
 }

@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/user', \App\Http\Controllers\API\v1\User\IndexController::class);
 Route::get('/user/{user}', \App\Http\Controllers\API\v1\User\ShowController::class);
+Route::patch('/user/{user}', \App\Http\Controllers\API\v1\User\UpdateController::class);
 Route::post('/user', \App\Http\Controllers\API\v1\User\StoreController::class);
 Route::post('/user/verify', \App\Http\Controllers\API\v1\User\VerifyEmailController::class);
 
@@ -42,3 +43,7 @@ Route::post('/news', \App\Http\Controllers\API\v1\News\StoreController::class);
 Route::get('/namaz', \App\Http\Controllers\API\v1\Namaz\IndexController::class);
 Route::get('/namaz/{namaz}', \App\Http\Controllers\API\v1\Namaz\ShowController::class);
 Route::post('/namaz', \App\Http\Controllers\API\v1\Namaz\StoreController::class);
+
+Route::get('/support', \App\Http\Controllers\API\v1\Support\IndexController::class);
+Route::get('/support/{support}', \App\Http\Controllers\API\v1\Support\ShowController::class);
+Route::post('/support', \App\Http\Controllers\API\v1\Support\StoreController::class);

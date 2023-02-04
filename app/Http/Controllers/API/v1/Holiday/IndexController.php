@@ -31,6 +31,6 @@ class IndexController extends Controller
             ];
             return $months[$date->format('n') - 1];
         });
-        return response()->json($holidays);
+        return response()->json($holidays, 200);
     }
 }

@@ -16,6 +16,6 @@ class IndexController extends Controller
                 'designation',
             )
             ->paginate(10);
-        return response()->json($korans);
+        return response()->json($korans, 200);
     }
 }
