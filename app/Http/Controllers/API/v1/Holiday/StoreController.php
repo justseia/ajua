@@ -22,6 +22,6 @@ class StoreController extends Controller
             return response()->json(['message' => 'error'], 400);
         }
 
-        return response()->json($holiday, 200);
+        return response()->json(['message' => 'success'], 200);
     }
 }

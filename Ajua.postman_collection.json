@@ -14,13 +14,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/user/1",
+							"raw": "{{url}}/user/20",
 							"host": [
 								"{{url}}"
 							],
 							"path": [
 								"user",
-								"1"
+								"20"
 							]
 						}
 					},
@@ -28,9 +28,16 @@
 				},
 				{
 					"name": "Get All User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
 						"url": {
 							"raw": "{{url}}/user?page=1",
 							"host": [
@@ -55,34 +62,8 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Seiitmurat",
-									"type": "default"
-								},
-								{
-									"key": "surname",
-									"value": "Kalmurat",
-									"type": "default"
-								},
-								{
-									"key": "gender",
-									"value": "male",
-									"type": "default"
-								},
-								{
-									"key": "email",
-									"value": "seiitmurat.iitu@gmail.com",
-									"type": "default"
-								},
-								{
-									"key": "birthday",
-									"value": "2023-01-14 00:00:00",
-									"type": "default"
-								}
-							],
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Seiitmurat\",\n    \"surname\": \"Kalmurat\",\n    \"gender\": \"male\",\n    \"email\": \"seiitmurat.iitu@gmail.com\",\n    \"birthday\": \"2023-01-14 00:00:00\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -107,19 +88,8 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "email",
-									"value": "seiitmurat.iitu@gmail.com",
-									"type": "default"
-								},
-								{
-									"key": "code",
-									"value": "2537",
-									"type": "default"
-								}
-							],
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"seiitmurat.iitu@gmail.com\",\n    \"code\": \"4446\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -134,6 +104,36 @@
 							"path": [
 								"user",
 								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Seiitmurat\",\n    \"surname\": \"Seiitmurat\",\n    \"gender\": \"male\",\n    \"email\": \"seiitmurat.iitu@gmail.com\",\n    \"birthday\": \"2023-01-14 00:00:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user/20",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user",
+								"20"
 							]
 						}
 					},
@@ -185,24 +185,8 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Ajua",
-									"type": "default"
-								},
-								{
-									"key": "photo",
-									"type": "file",
-									"src": "/Users/seiitmratkalmrat/Downloads/Icon mobile app.png"
-								},
-								{
-									"key": "date",
-									"value": "2023-01-14 23:42:33",
-									"type": "default"
-								}
-							],
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ид аль-Фитр (Рамадан-байрам)\",\n    \"date\": \"2023-01-14 23:42:33\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -273,47 +257,11 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Аль-Фатиха",
-									"type": "default"
-								},
-								{
-									"key": "designation",
-									"value": "(Открывающая Коран)",
-									"type": "default"
-								},
-								{
-									"key": "body",
-									"value": "ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ",
-									"type": "default"
-								},
-								{
-									"key": "translation",
-									"value": "Во имя Аллаха, Милостивого, Милосердного!",
-									"type": "default"
-								},
-								{
-									"key": "translit",
-									"value": "Bismi Al-Lahi Ar-Raĥmāni Ar-Raĥīmi",
-									"type": "default"
-								},
-								{
-									"key": "audio",
-									"value": "https://clck.ru/33GttN",
-									"type": "default"
-								},
-								{
-									"key": "interpretation",
-									"value": "Во имя Аллаха, Милостивого, Милосердного! [[Это означает: я начинаю во имя Аллаха. Из лексического анализа этого словосочетания ясно, что подразумеваются все прекрасные имена Всевышнего Господа. Аллах - одно из этих имен, означающее «Бог, Которого обожествляют и Которому поклоняются, Единственный, Кто заслуживает поклонения в силу Своих божественных качеств - качеств совершенства и безупречности». Прекрасные имена Милостивый и Милосердный свидетельствуют о Его великом милосердии, объемлющем всякую вещь и всякую тварь. Милосердия Аллаха в полной мере будут удостоены Его богобоязненные рабы, которые следуют путем Божьих пророков и посланников. А все остальные творения получат лишь часть Божьей милости. Следует знать, что все праведные богословы единодушно говорили о необходимости веры в Аллаха и Его божественные качества. Господь - Милостивый и Милосердный, то есть обладает милосердием, которое проявляется на Его рабах. Все блага и щедроты являются одним из многочисленных проявлений Его милости и сострадания. То же самое можно сказать и об остальных именах Аллаха. Он всеведущ, то есть обладает знанием обо всем сущем. Он всемогущ, то есть обладает могуществом и властен над всякой тварью.]]",
-									"type": "default"
-								}
-							],
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Аль-Фатиха\",\n    \"designation\": \"(Открывающая Коран)\",\n    \"body\": \"ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ\",\n    \"translation\": \"Во имя Аллаха, Милостивого, Милосердного!\",\n    \"translit\": \"Bismi Al-Lahi Ar-Raĥmāni Ar-Raĥīmi\",\n    \"audio\": \"https://clck.ru/33GttN\",\n    \"interpretation\": \"Во имя Аллаха, Милостивого, Милосердного! [[Это означает: я начинаю во имя Аллаха. Из лексического анализа этого словосочетания ясно, что подразумеваются все прекрасные имена Всевышнего Господа. Аллах - одно из этих имен, означающее «Бог, Которого обожествляют и Которому поклоняются, Единственный, Кто заслуживает поклонения в силу Своих божественных качеств - качеств совершенства и безупречности». Прекрасные имена Милостивый и Милосердный свидетельствуют о Его великом милосердии, объемлющем всякую вещь и всякую тварь. Милосердия Аллаха в полной мере будут удостоены Его богобоязненные рабы, которые следуют путем Божьих пророков и посланников. А все остальные творения получат лишь часть Божьей милости. Следует знать, что все праведные богословы единодушно говорили о необходимости веры в Аллаха и Его божественные качества. Господь - Милостивый и Милосердный, то есть обладает милосердием, которое проявляется на Его рабах. Все блага и щедроты являются одним из многочисленных проявлений Его милости и сострадания. То же самое можно сказать и об остальных именах Аллаха. Он всеведущ, то есть обладает знанием обо всем сущем. Он всемогущ то есть обладает могуществом и властен над всякой тварью.]]\"\n}",
 							"options": {
 								"raw": {
-									"language": "javascript"
+									"language": "json"
 								}
 							}
 						},
@@ -381,34 +329,13 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Саджа",
-									"type": "default"
-								},
-								{
-									"key": "designation",
-									"value": "Субхана зиль-мульки валь-малакут. Субхана зиль-иззати валь-азамати в",
-									"type": "default"
-								},
-								{
-									"key": "body",
-									"value": "ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ",
-									"type": "default"
-								},
-								{
-									"key": "transcription",
-									"value": "Зааликаль Китаабу ла райба фих. Худал-лил-Муттакин",
-									"type": "default"
-								},
-								{
-									"key": "audio",
-									"value": "https://clck.ru/33GttN",
-									"type": "default"
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Саджа\",\n    \"designation\": \"Субхана зиль-мульки валь-малакут. Субхана зиль-иззати валь-азамати в\",\n    \"body\": \"ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ\",\n    \"transcription\": \"Зааликаль Китаабу ла райба фих. Худал-лил-Муттакин\",\n    \"audio\": \"https://clck.ru/33GttN\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "{{url}}/zikr",
@@ -468,19 +395,13 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "image",
-									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
-									"type": "default"
-								},
-								{
-									"key": "url",
-									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
-									"type": "default"
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"https://via.placeholder.com/350x120.png/005500?text=omnis\",\n    \"url\": \"https://via.placeholder.com/350x120.png/005500?text=omnis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "{{url}}/news",
@@ -540,19 +461,13 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "image",
-									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
-									"type": "default"
-								},
-								{
-									"key": "url",
-									"value": "https://via.placeholder.com/350x120.png/005500?text=omnis",
-									"type": "default"
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"https://via.placeholder.com/350x120.png/005500?text=omnis\",\n    \"url\": \"https://via.placeholder.com/350x120.png/005500?text=omnis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
+							}
 						},
 						"url": {
 							"raw": "{{url}}/namaz",
@@ -561,6 +476,78 @@
 							],
 							"path": [
 								"namaz"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Support",
+			"item": [
+				{
+					"name": "Get Support",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/support/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"support",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Support",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/support?page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"support"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Support",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": \"1\",\n    \"message\": \"Hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/support",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"support"
 							]
 						}
 					},
@@ -592,8 +579,20 @@
 	"variable": [
 		{
 			"key": "url",
-			"value": "",
+			"value": "http://354b-37-99-44-222.eu.ngrok.io/api",
+			"type": "default",
+			"disabled": true
+		},
+		{
+			"key": "url",
+			"value": "http://localhost:8876/api/v2",
 			"type": "default"
+		},
+		{
+			"key": "url",
+			"value": "http://194.110.55.166/api",
+			"type": "default",
+			"disabled": true
 		}
 	]
 }

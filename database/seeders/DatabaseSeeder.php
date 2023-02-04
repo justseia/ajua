@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
          \App\Models\Koran::factory(20)->create();
          \App\Models\Zikr::factory(20)->create();
          \App\Models\News::factory(20)->create();
+         \App\Models\Support::factory(40)->create();
     }
 }

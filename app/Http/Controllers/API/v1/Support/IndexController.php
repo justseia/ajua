@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $support = Support::all();
+        $support = Support::latest('id')->simplePaginate(10);
         return response()->json($support, 200);
     }
 }

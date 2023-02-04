@@ -9,6 +9,10 @@ class ShowController extends Controller
 {
     public function __invoke(User $user)
     {
+        $user = $user->makeHidden(
+            'email_verified_at',
+            'verification_code'
+        );
         return response()->json($user);
     }
 }
