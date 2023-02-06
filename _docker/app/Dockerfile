@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
       libzip-dev \
       zip unzip \
       git && \
-      docker-php-ext-install mysqli && \
+      docker-php-ext-install mysqli pdo pdo_mysql && \
       docker-php-ext-install bcmath && \
       docker-php-ext-install gd && \
       docker-php-ext-install zip && \
@@ -16,7 +16,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY ./_docker/app/php.ini /usr/local/etc/php/conf.d/php.ini
 
-# Install composer
 ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN curl -sS https://getcomposer.org/installer | php -- \
     --filename=composer \
