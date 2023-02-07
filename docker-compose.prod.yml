@@ -2,6 +2,7 @@ version: "3"
 
 services:
   nginx:
+    restart: always
     image: nginx:latest
     volumes:
       - ./:/var/www
@@ -13,6 +14,7 @@ services:
     container_name: project_nginx
 
   app:
+    restart: always
     build:
       context: .
       dockerfile: _docker/app/Dockerfile
