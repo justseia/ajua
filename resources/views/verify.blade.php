@@ -34,7 +34,7 @@
 <div style="display: flex; justify-content: center;background-color: rgb(243, 244, 245);">
 	<div class="md:p-10" style="display: flex; flex-direction: column; justify-content: center; padding: 1.25rem; text-align: center;">
 		<div style="display: flex; justify-content: center;">
-			<img src="https://shorturl.at/oOV02" alt="" style="width: 160px;" width="160">
+			<img src="https://o.remove.bg/downloads/b583e633-7ba7-4f78-bb1d-22a55c8a850e/Screenshot_2023-02-08_at_17.34.41-removebg-preview.png" alt="" style="width: 160px;" width="160">
 		</div>
 		<div class="md:px-[100px]" style="width: auto; max-width: 600px; background-color: rgb(255 255 255); padding-top: 2.5rem; padding-bottom: 2.5rem; padding-left: 50px; padding-right: 50px;">
 			<div class="md:text-[30px]" style="margin-bottom: 1.25rem; font-size: 22px; font-weight: 700; color: rgb(75 85 99);">Добро пожаловать в Ajwa!</div>
